@@ -2,9 +2,15 @@
     width: 750px;
     height: 836px;
     background-color: #f5f5f5;
-
     padding: 20px;
     filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+    /*display: flex;*/
+}
+
+.createAct {
+
+    padding: 10px 20px;
+    margin: 20px;
 }
 
 .cardAct {
@@ -23,12 +29,20 @@
     padding: 10px 20px;
     margin: 20px;
     border-radius: 15px;
-    border-style: dashed
+    border-style: dashed;
+    display :flex;
+    justify-content: center;
 }
 
+
 .addCardActText {
-    text-align: center;
+    display: flex;
+    padding: 10px 20px;
+    margin: 20px;
+
 }
+
+
 
 .cardActName {
     display: flex;
