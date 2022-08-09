@@ -1,7 +1,57 @@
-.ExerciseList {
+.exerciseList {
     width: 750px;
     height: 836px;
     background-color: #f5f5f5;
+
     padding: 20px;
     filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+}
+
+.cardAct {
+
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #A7DFF1;
+    border-radius: 15px;
+    font-family: Inter;
+    font-weight: lighter;
+    font-size: 11px;
+}
+
+.addCardAct {
+
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    border-style: dashed
+}
+
+.addCardActText {
+    text-align: center;
+}
+
+.cardActName {
+    display: flex;
+    flex-direction: row;
+}
+
+.cardActType {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+
+.boldFont {
+    font-weight: bold;
+}
+
+.createAct {
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.pendingAct {
+    padding: 10px 20px;
+    margin: 20px;
 }

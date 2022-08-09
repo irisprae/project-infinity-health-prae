@@ -2,9 +2,12 @@ import React from 'react'
 import './ExerciseList.css'
 
 const ExerciseList = (props,handleDelete,addAct) => {
+
+  console.log(props)
+  
   return (
     <div className='ExerciseList'>
-        //ExerciseList
+
 
                 <div>
 
