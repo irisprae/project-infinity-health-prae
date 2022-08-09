@@ -2,29 +2,32 @@ import React from 'react'
 import './ExerciseList.css'
 
 const ExerciseList = (props,handleDelete,addAct) => {
+
+  console.log(props)
+
   return (
-    <div className='ExerciseList'>
-        //ExerciseList
+    <div className='exerciseList'>
 
-                <div>
-
-              <div className = 'exerciseList'>
-          <h4 className = 'createAct' onClick={() => addAct}>+ Create yor activities<br/></h4>
+	<div
+ className = 'exerciseListContainer'>
+          <h2 className = 'createAct' onClick={() => addAct}>+ Create yor activities<br/></h2>
 
 
           <div className="addCardAct">
 
-        <p  className="addCardActText">+ Tap here to add your activity<br/></p>
+        <button  className="addCardActText">+ Tap here to add your activity<br/></button>
 
           </div>
 
       {props.card.map(({ id, activity, distance,durationHours,durationMin,date,calories,heartrate,description }) => {
         return(
-          <><li key={id}></li><button onClick={() => handleDelete(id)}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</button><div className="cardAct">
+          /*<><li key={id}></li><button className ="deleteActButton" onClick={() => handleDelete(id)}>X</button>*/
+          <div className="cardAct">
             <div className="cardActName">
               <div><span className='boldFont'>Run to Forget Christine (again)</span></div>
               <div className="cardActType"><span className='boldFont'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {activity}</span></div>
             </div>
+
             <div>
               <p className="cardActDuration"><span className='boldFont'>Duration:</span> <span>{durationHours} Hour {durationMin} Minutes</span></p>
               <p className="cardActCalories">{calories}</p>
@@ -33,13 +36,15 @@ const ExerciseList = (props,handleDelete,addAct) => {
               <p className="cardActCompletedDate">completed on {date}.</p>
               <p>id {id} distance {distance}  heart {heartrate}</p>
             </div>
-          </div></>
+              <button className ="deleteActButton" onClick={() => handleDelete(id)}>-X-</button>
+              <button className ="editActButton" onClick={() => handleEdit(id)}>*0*</button>
+          </div>/*</>*/
           )}
           )
       }
     
     </div>
-    </div>
+
         </div>
   )
 
