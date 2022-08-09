@@ -1,4 +1,4 @@
-.Addactivities{
+.Addactivities {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +9,5 @@
 
 .BodyAct {
   display: inline-flex;
-  
+
 }
