@@ -1,0 +1,65 @@
+.exerciseForm {
+    width: 357px;
+    height: 836px;
+    border-radius: 5px;
+    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+}
+
+.exerciseForm h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.exerciseForm form {
+    width: 100%;
+}
+
+.exerciseForm form label {
+    font-weight: bold;
+}
+
+.exerciseForm form select,
+input {
+    font-size: 1rem;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.exerciseForm form label {
+    float: left;
+}
+
+.exerciseForm form p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: rgb(238, 98, 98);
+}
+
+.exerciseForm .button {
+    width: 100%;
+    background-color: #7dcbe6;
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exerciseForm .button:hover {
+    background-color: #0b9aca;
+}
+
+.Description {
+    height: 80px;
+}

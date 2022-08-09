@@ -1,0 +1,8 @@
+.Navbar {
+    width: 220px;
+    height: 836px;
+    border-radius: 5px 0 0 5px;
+    background-color: #97D4E6;
+    padding: 20px;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+}
