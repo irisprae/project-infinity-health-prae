@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar/Navbar"
 import RightSection from '../../Components/RightSection/RightSection'
 import CalPic from './CalPhotoRoom.png'
 import StepPic from './StepPhotoRoom.png'
