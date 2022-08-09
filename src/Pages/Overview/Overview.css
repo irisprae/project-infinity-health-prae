@@ -1,13 +1,159 @@
-.Overview{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100wh;
-  }
+.OverviewArea{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100wh;
   
+  /*For Styling*/
+  justify-content: flex-start;
+}
+
+.NavbarSection{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  /*For Styling*/
+  border: 2px solid black;
+  width: 220px;
+}
+
+.MiddleSection{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 30px 16px 16px 16px;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.LastestSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 225px;
+  margin: 0;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.TodaySection{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 225px;
+  margin: 0;
+  border: 2px solid black;
+  width: 100%;
   
-  .BodyOver {
-    display: inline-flex;
-    
-  }
+}
+
+.StatusSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  border: 2px solid black;
+  
+}
+
+.StatusCard{
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  width: 150px;
+  height: 60px;
+  align-items: flex-start;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  
+}
+
+.StatusCard .Grey{
+  font-size: 10px;
+}
+
+.StatusImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin-right: 8px;
+  border-radius: 10px;
+}
+
+.StatusImg img{
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.CalImg{
+  background: #E4592D;
+}
+
+.StepImg{
+  background: #F8763D;
+}
+
+.ActImg{
+  background: #FABC55;
+}
+
+.WaterImg{
+  background: #89D7EE;
+}
+
+.TrophySection{
+  display: flex;
+  flex-direction: row;
+  height: 276px;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+.ChallengeBoard{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid black;
+  justify-content: center;
+  height: 259px;
+  background: #A7DFF1;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  
+}
+
+.TrophyBoard{
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  width: 33%;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  
+}
+
+
+.Right{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 2px solid black;
+}
