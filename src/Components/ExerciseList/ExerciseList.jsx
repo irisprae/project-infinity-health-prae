@@ -36,7 +36,8 @@ const ExerciseList = (props,handleDelete,addAct) => {
               <p className="cardActCompletedDate">completed on {date}.</p>
               <p>id {id} distance {distance}  heart {heartrate}</p>
             </div>
-              <button className ="deleteActButton" onClick={() => handleDelete(id)}>X</button>
+              <button className ="deleteActButton" onClick={() => handleDelete(id)}>-X-</button>
+              <button className ="editActButton" onClick={() => handleEdit(id)}>*0*</button>
           </div>/*</>*/
           )}
           )
