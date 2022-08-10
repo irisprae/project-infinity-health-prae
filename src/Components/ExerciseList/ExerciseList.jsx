@@ -1,18 +1,14 @@
-import React, { useState,useEffect } from 'react'
-import './ExerciseList.css'
+import React, { useState,useEffect } from "react"
+import "./ExerciseList.css"
 import ReactPaginate from "react-paginate";
 
-const ExerciseList = (props,handleDelete,addAct) => {
+const ExerciseList = ({exerciseList, handleDelete, addAct, handleEdit}) => {
 
-    const {exerciseList} = props;
+    //const {exerciseList} = props;
     const [currentItems, setCurrentItems] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage  = 3;
-
-
-
-
   
   useEffect(() => {
 
@@ -30,48 +26,84 @@ const ExerciseList = (props,handleDelete,addAct) => {
     setItemOffset(newOffset);
   };
 
-  console.log(props)
 
-  return (
-    <div className='exerciseList'>
+return (
+    <div className="exerciseList">
+      <div className="exerciseListContainer">
+        <h2 className="createAct" onClick={addAct}>
+          + Create your activities
+          <br />
+        </h2>
 
-	<div className = 'exerciseListContainer'>
-          <h2 className = 'createAct' onClick={() => addAct}>+ Create yor activities<br/></h2>
+        <div className="addCardAct">
+          <button className="addCardActText" onClick={addAct}>
+            + Tap here to add your activity
+            <br />
+          </button>
+        </div>
 
+        {currentItems.map(
+          ({
+            id,
+            activity,
+            distance,
+            durationHours,
+            durationMin,
+            date,
+            calories,
+            heartrate,
+            description,
+          }) => {
+            return (
+              
+              <div className="cardAct" key={id}>
+                <div className="cardActName">
+                  <div>
+                    <span className="boldFont">
+                      Run to Forget Christine (again)
+                    </span>
+                  </div>
+                  <div className="cardActType">
+                    <span className="boldFont">
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {activity}
+                    </span>
+                  </div>
+                </div>
 
-          <div className="addCardAct">
+                <div>
+                  <p className="cardActDuration">
+                    <span className="boldFont">Duration:</span>{" "}
+                    <span>
+                      {durationHours} Hour {durationMin} Minutes
+                    </span>
+                  </p>
+                  <p className="cardActCalories">{calories}</p>
+                  <p className="cardActDes">{description}</p>
+                  <p className="cardActAdddate">added activity on {date}.</p>
+                  <p className="cardActCompletedDate">completed on {date}.</p>
+                  <p>
+                    id {id} distance {distance} heart {heartrate}
+                  </p>
+                </div>
+                <button
+                  className="deleteActButton"
+                  onClick={() => handleDelete(id)}
+                >
+                  -Delete-
+                </button>
+                <button
+                  className="editActButton"
+                  onClick={() => handleEdit(id)}
+                >
+                  -Edit-
+                </button>
+              </div> 
+            );
+          }
+        )}
+      </div>
 
-        <button  className="addCardActText">+ Tap here to add your activity<br/></button>
-
-          </div>
-
-      {currentItems.map(({ id, activity, distance,durationHours,durationMin,date,calories,heartrate,description }) => {
-        return(
-          /*<><li key={id}></li><button className ="deleteActButton" onClick={() => handleDelete(id)}>X</button>*/
-          <div className="cardAct">
-            <div className="cardActName">
-              <div><span className='boldFont'>Run to Forget Christine (again)</span></div>
-              <div className="cardActType"><span className='boldFont'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {activity}</span></div>
-            </div>
-
-            <div>
-              <p className="cardActDuration"><span className='boldFont'>Duration:</span> <span>{durationHours} Hour {durationMin} Minutes</span></p>
-              <p className="cardActCalories">{calories}</p>
-              <p className="cardActDes">{description}</p>
-              <p className="cardActAdddate">added activity on {date}.</p>
-              <p className="cardActCompletedDate">completed on {date}.</p>
-              <p>id {id} distance {distance}  heart {heartrate}</p>
-            </div>
-              <button className ="deleteActButton" onClick={() => handleDelete(id)}>-Delete -</button>
-              <button className ="editActButton" onClick={() => handleEdit(id)}>-Edit-</button>
-          </div>/*</>*/
-          )}
-          )
-      }
-    
-    </div>
-
-    <ReactPaginate
+      <ReactPaginate
 
         breakLabel="..."
         nextLabel="next >"
@@ -86,17 +118,10 @@ const ExerciseList = (props,handleDelete,addAct) => {
         disabledClassName="paginationDisabled"
         activeClassName="paginationActive"
           
-          />
+     />
 
-
-
-        </div>
-  )
-
-  
-        
-
-
-}
+    </div>
+  );
+};
 
 export default ExerciseList

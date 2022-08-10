@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react"
 import Navbar from "../../Components/Navbar/Navbar";
 import ExerciseList from "../../Components/ExerciseList/ExerciseList";
 import ExerciseForm from "../../Components/ExerciseForm/ExerciseForm";
 
 import "./Addactivities.css";
-
-const Addactivities = () => {
+import RightSection from "../../Components/RightSection/RightSection";
 
   const exerciseList = [{
     id:'0',
@@ -94,14 +93,29 @@ const Addactivities = () => {
     description:'runnnnnnnnnnnnnnnnnnn? again',
     }];
 
+const Addactivities = () => {
 
-        const handleDelete = (taskIdToRemove) => {
-    setAllTasks((prev) => prev.filter(
-      (task) => task.id !== taskIdToRemove
-    ));
-    }
 
-    const addAct = () =>{}
+const [allTasks, setAllTasks] = useState(exerciseList);
+  const [isShow, setIsShow] = useState(false);
+
+  const handleDelete = (taskIdToRemove) => {
+    return setAllTasks((prev) =>
+      prev.filter((task) => task.id !== taskIdToRemove)
+    );
+  };
+
+  const addAct = () => {
+    setIsShow((prevIsShow) => !prevIsShow);
+  };
+
+  // const handleEdit = [...allTasks].map((card) => {
+  //   if (card.id === id) {
+  //     card.text = handleEdit
+  //   }
+  //   return ExerciseForm
+  // });
+
 
 
   return (
@@ -109,12 +123,12 @@ const Addactivities = () => {
       <div className="BodyAct">
         <Navbar />
         <ExerciseList 
-        exerciseList = {exerciseList} 
+        exerciseList = {allTasks} 
         handleDelete = {handleDelete} 
         addAct = {addAct}
         />
         
-        <ExerciseForm />
+        {isShow ? <ExerciseForm /> : <RightSection />}
       </div>
     </div>
   );
