@@ -9,6 +9,8 @@
 .exerciseListContainer{
         width: 750px;
         height: 677px;
+        padding-bottom:20px;
+        margin-bottom: 20px;
 }
 
 .createAct {
@@ -71,8 +73,6 @@
     padding: 10px 20px;
     margin: 20px;
 }
-
-
 
 .paginationButton {
     width: 80%;
