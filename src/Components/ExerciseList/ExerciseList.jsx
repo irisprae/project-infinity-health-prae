@@ -1,15 +1,41 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './ExerciseList.css'
+import ReactPaginate from "react-paginate";
 
 const ExerciseList = (props,handleDelete,addAct) => {
+
+    const {exerciseList} = props;
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage  = 3;
+
+
+
+
+  
+  useEffect(() => {
+
+    const endOffset = itemOffset + itemsPerPage;
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    setCurrentItems(exerciseList.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(exerciseList.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage,exerciseList]);
+
+  const handlePageClick = (e) => {
+    const newOffset = (e.selected * itemsPerPage) % exerciseList.length;
+    console.log(
+      `User requested page number ${e.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
 
   console.log(props)
 
   return (
     <div className='exerciseList'>
 
-	<div
- className = 'exerciseListContainer'>
+	<div className = 'exerciseListContainer'>
           <h2 className = 'createAct' onClick={() => addAct}>+ Create yor activities<br/></h2>
 
 
@@ -19,7 +45,7 @@ const ExerciseList = (props,handleDelete,addAct) => {
 
           </div>
 
-      {props.card.map(({ id, activity, distance,durationHours,durationMin,date,calories,heartrate,description }) => {
+      {currentItems.map(({ id, activity, distance,durationHours,durationMin,date,calories,heartrate,description }) => {
         return(
           /*<><li key={id}></li><button className ="deleteActButton" onClick={() => handleDelete(id)}>X</button>*/
           <div className="cardAct">
@@ -36,14 +62,33 @@ const ExerciseList = (props,handleDelete,addAct) => {
               <p className="cardActCompletedDate">completed on {date}.</p>
               <p>id {id} distance {distance}  heart {heartrate}</p>
             </div>
-              <button className ="deleteActButton" onClick={() => handleDelete(id)}>-X-</button>
-              <button className ="editActButton" onClick={() => handleEdit(id)}>*0*</button>
+              <button className ="deleteActButton" onClick={() => handleDelete(id)}>-Delete -</button>
+              <button className ="editActButton" onClick={() => handleEdit(id)}>-Edit-</button>
           </div>/*</>*/
           )}
           )
       }
     
     </div>
+
+    <ReactPaginate
+
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={3}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+        containerClassName="paginationButton"
+        previousLinkClassName="previousButton"
+        nextLinkClassName="nextButton"
+        disabledClassName="paginationDisabled"
+        activeClassName="paginationActive"
+          
+          />
+
+
 
         </div>
   )

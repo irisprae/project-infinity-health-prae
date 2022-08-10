@@ -7,7 +7,7 @@ import "./Addactivities.css";
 
 const Addactivities = () => {
 
-  const card = [{
+  const exerciseList = [{
     id:'0',
     activity:'run',
     distance:5,
@@ -48,7 +48,52 @@ const Addactivities = () => {
     calories:'1500',
     heartrate:85,
     description:'runnnnnnnnnnnnnnnnnnn? again',
-    }]
+    },
+  {
+    id:'4',
+    activity:'run',
+    distance:500000,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'runnnnnnnnnnnnnnnnnnn? again',
+    },
+  {
+    id:'5',
+    activity:'run',
+    distance:500000,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'runnnnnnnnnnnnnnnnnnn? again',
+    },
+  {
+    id:'6',
+    activity:'run',
+    distance:500000,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'runnnnnnnnnnnnnnnnnnn? again',
+    },
+  {
+    id:'7',
+    activity:'run',
+    distance:500000,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'runnnnnnnnnnnnnnnnnnn? again',
+    }];
+
 
         const handleDelete = (taskIdToRemove) => {
     setAllTasks((prev) => prev.filter(
@@ -64,7 +109,7 @@ const Addactivities = () => {
       <div className="BodyAct">
         <Navbar />
         <ExerciseList 
-        card = {card} 
+        exerciseList = {exerciseList} 
         handleDelete = {handleDelete} 
         addAct = {addAct}
         />
