@@ -17,7 +17,8 @@ const App = () => {
       }}
     >
       <Link to="/Overview">Overview</Link> {" "}
-      <Link to="/Addactivities">Addactivities</Link>
+      <Link to="/Addactivities">Addactivities</Link> {" "}
+      <Link to="/PreLogin">Pre-Login</Link>
     </nav>
   </div>
   )

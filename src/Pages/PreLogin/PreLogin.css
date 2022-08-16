@@ -1,0 +1,50 @@
+.main {
+    color: #5F6668;
+}
+
+.navbar {
+    padding: 30px;
+    background-color: #E1F8FF;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.leftNavbar {
+    display: flex;
+    align-items: center;
+}
+
+.leftNavbar p {
+    margin-left: 5px;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.leftNavbar h1 {
+    margin-left: 5px;
+    font-size: 26.5px;
+}
+
+.rightNavBar {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.rightNavBar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #5F6668;
+}
+
+.signIn {
+    margin-left: 20px;
+    background-color: #5F6668;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+
