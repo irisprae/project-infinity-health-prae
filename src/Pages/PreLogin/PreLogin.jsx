@@ -25,7 +25,6 @@ const PreLogin = () => {
           <p href="login" className="signIn">Log In</p>
         </div>
       </div>
-    < InfiniteBody />
     </div>
   );
 };

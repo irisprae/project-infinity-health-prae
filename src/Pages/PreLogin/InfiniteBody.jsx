@@ -73,8 +73,9 @@ const InfiniteBody = () => {
         </div>
       </div>
       {/* Testimonial */}
-      <h1>Hear what our users say:</h1>
- 
+      <div className="testimonial">
+        <h1>Hear what our users say:</h1>
+      </div>
     </div>
   );
 };

@@ -18,7 +18,9 @@ const App = () => {
     >
       <Link to="/Overview">Overview</Link> {" "}
       <Link to="/Addactivities">Addactivities</Link> {" "}
-      <Link to="/PreLogin">Pre-Login</Link>
+      <Link to="/PreLogin">Pre-Login</Link> {" "}
+      <Link to="/Login">Log In</Link> {" "}
+      <Link to="/SignUp"> Register</Link>
     </nav>
   </div>
   )
