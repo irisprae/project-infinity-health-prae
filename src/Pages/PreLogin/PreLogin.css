@@ -39,10 +39,13 @@
     color: #5F6668;
 }
 
-.signIn {
+.signInn {
     margin-left: 20px;
     background-color: #5F6668;
-    color: #FFF;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+.signInn p {
+    color: #FFF;
 }

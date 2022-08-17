@@ -22,7 +22,7 @@ const InfiniteBody = () => {
             bored of your mundane going-to-the-gym excercises? We have plenty of
             fun challenges for you!
           </p>
-          <a>Register Now ⎘</a>
+          <Link to="/SignUp">Register Now ⎘</Link>
           <p className="connect">Connect with us:</p>
           <div className="heroLeftIcons">
             <img src={Facebook} />
