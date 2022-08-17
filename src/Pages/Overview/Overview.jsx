@@ -35,8 +35,7 @@ const Overview = () => {
               <div>calories</div>
             </div>
           </div>
-
-
+          
           <div className='StatusCard'>
             <div className='StatusImg StepImg'>{/*Card Image Here*/}<img src={StepPic} /> </div>
             <div>
