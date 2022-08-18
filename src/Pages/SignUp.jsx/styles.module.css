@@ -1,22 +1,25 @@
 .signup_container {
 	width: 100%;
-	min-height: 100vh;
-	background-color: #f5f5f5;
+	background-color: #E1F8FF;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
 }
 
-.signup_form_container {
+body {
+	background-color: #E1F8FF;
+	width: 100%;
+}
+
+/* .signup_form_container {
 	width: 900px;
 	height: 500px;
 	display: flex;
 	border-radius: 10px;
 	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
 		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
-}
+} */
 
-.left {
+/* .left {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -25,9 +28,10 @@
 	background-color: #3bb19b;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-}
+	width: 100%;
+} */
 
-.left h1 {
+.left h4 {
 	margin-top: 0;
 	color: white;
 	font-size: 35px;
@@ -39,10 +43,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	background-color: white;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	justify-content: flex-start;
+	background-color: #E1F8FF;
 }
 
 .form_container {
@@ -51,9 +53,11 @@
 	align-items: center;
 }
 
-.form_container h1 {
-	font-size: 40px;
+.form_container h4 {
+	font-size: 30px;
+	color: #5F6668;
 	margin-top: 0;
+	padding-bottom: 20px;
 }
 
 .input {
@@ -62,9 +66,11 @@
 	width: 370px;
 	padding: 15px;
 	border-radius: 10px;
-	background-color: #edf5f3;
-	margin: 5px 0;
+	background-color: #FFFFFF;
+	margin: 10px 0;
 	font-size: 14px;
+	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
 .error_msg {
@@ -87,12 +93,24 @@
 	border-radius: 20px;
 	width: 180px;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 25px;
 	cursor: pointer;
+	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
 .green_btn {
-	background-color: #3bb19b;
+	background-color: #9AE7FF;
 	color: white;
 	margin: 10px;
+}
+
+.UserPass {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_container p {
+	color: #FB8383;
 }
