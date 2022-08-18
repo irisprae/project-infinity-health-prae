@@ -35,7 +35,7 @@ const Login = () => {
       <PreLogin />
       <div className={styles.login_container}>
         <div className={styles.login_form_container}>
-          <div className={styles.left}>
+          <div>
             <form className={styles.form_container} onSubmit={handleSubmit}>
               <h4>Login to Your Account</h4>
               <br />
@@ -64,7 +64,7 @@ const Login = () => {
                 Submit
               </button>
               <br />
-              <h4>Not a member? Click<Link to="/signup"> here </Link>to register.</h4>
+              <p>Not a member? Click <Link to="/signup">here</Link> to register.</p>
             </form>
           </div>
         </div>
