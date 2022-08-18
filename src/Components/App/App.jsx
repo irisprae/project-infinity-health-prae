@@ -1,26 +1,25 @@
-import { Link, Route } from "react-router-dom";
-import "./App.css";
+import { Route, Routes, Navigate } from "react-router-dom";
+import Overview from "../../Pages/Overview/Overview";
+import Signup from "../../Pages/SignUp.jsx/SignUp";
+import Login from "../../Pages/Login/Login";
 import Home from "../../Pages/Home/Home";
+import Main from "../../Pages/LogOut.jsx/LogOut";
+import Addactivities from "../../Pages/AddActivities/Addactivities";
 
-const App = () => {
-  return (
-    <div>
-      <h1>Test Route</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/Overview">Overview</Link>
-        <Link to="/Addactivities">Addactivities</Link>
-        <Link to="/Home">Home</Link>
-        <Link to="/Login">Log In</Link>
-        <Link to="/SignUp">Register</Link>
-      </nav>
-      < Home />
-    </div>
-  );
-};
+function App() {
+	const user = localStorage.getItem("token");
+	return (
+		<Routes>
+			{user && <Route path="/overview" exact element={<Overview />} />}
+			{user && <Route path="/addactivities" exact element={<Addactivities />} />}
+			<Route path="/signup" exact element={<Signup />} />
+			<Route path="/login" exact element={<Login />} />
+      <Route path="/logout" exact element={<Main />} />
+			<Route path="/" exact element={<Home />} />
+			<Route path="/overview" element={<Navigate replace to="/login" />} />
+			<Route path="/addactivities" element={<Navigate replace to="/login" />} />
+		</Routes>
+	);
+}
 
 export default App;

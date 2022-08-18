@@ -18,7 +18,7 @@ const Login = () => {
       const url = "http://localhost:8080/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
-      window.location = "/";
+      window.location = "/overview";
     } catch (error) {
       if (
         error.response &&
@@ -37,7 +37,8 @@ const Login = () => {
         <div className={styles.login_form_container}>
           <div className={styles.left}>
             <form className={styles.form_container} onSubmit={handleSubmit}>
-              <h1>Login to Your Account</h1>
+              <h4>Login to Your Account</h4>
+              <br />
               <input
                 type="email"
                 placeholder="Email"
@@ -47,6 +48,7 @@ const Login = () => {
                 required
                 className={styles.input}
               />
+              <br />
               <input
                 type="password"
                 placeholder="Password"
@@ -56,11 +58,13 @@ const Login = () => {
                 required
                 className={styles.input}
               />
+              <br />
               {error && <div className={styles.error_msg}>{error}</div>}
               <button type="submit" className={styles.green_btn}>
                 Submit
               </button>
-              <h1>Not a member? Click<Link to="/signup"> here </Link>to register.</h1>
+              <br />
+              <h4>Not a member? Click<Link to="/signup"> here </Link>to register.</h4>
             </form>
           </div>
         </div>
