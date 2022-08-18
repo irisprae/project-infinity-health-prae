@@ -5,7 +5,7 @@ import Home from "../../Pages/Home/Home";
 const App = () => {
   return (
     <div>
-      {/* <h1>Test Route</h1>
+      <h1>Test Route</h1>
       <nav
         style={{
           borderBottom: "solid 1px",
@@ -16,8 +16,8 @@ const App = () => {
         <Link to="/Addactivities">Addactivities</Link>
         <Link to="/Home">Home</Link>
         <Link to="/Login">Log In</Link>
-        <Link to="/SignUp"> Register</Link>
-      </nav> */}
+        <Link to="/SignUp">Register</Link>
+      </nav>
       < Home />
     </div>
   );

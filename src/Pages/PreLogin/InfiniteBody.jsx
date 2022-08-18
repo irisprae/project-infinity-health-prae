@@ -76,6 +76,7 @@ const InfiniteBody = () => {
       <div className="testimonial">
         <h1>Hear what our users say:</h1>
       </div>
+      
     </div>
   );
 };
