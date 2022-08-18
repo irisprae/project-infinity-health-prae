@@ -5,9 +5,9 @@ import Login from "../../Pages/Login/Login";
 import Home from "../../Pages/Home/Home";
 import Main from "../../Pages/LogOut.jsx/LogOut";
 import Addactivities from "../../Pages/AddActivities/Addactivities";
+
 function App() {
 	const user = localStorage.getItem("token");
-
 	return (
 		<Routes>
 			{user && <Route path="/overview" exact element={<Overview />} />}

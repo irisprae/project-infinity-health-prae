@@ -66,9 +66,9 @@
   display: flex;
   justify-content: center;
 }
+
 .heroRightImage {
   position: relative;
-  margin-left: ;
   width: 50%;
 }
 
@@ -125,6 +125,8 @@
   display: flex;
   justify-content: center;
   padding: 25px 0px;
+  text-shadow: 2px 2px rgb(183, 182, 182);
+
 }
 
 .dashboardMain {
@@ -185,8 +187,153 @@
 
 /* Testimonial */
 
-.testimonial h1 {
+.review {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  text-shadow: 2px 2px rgb(183, 182, 182);
+}
+
+.testimonial {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color:#e1f8ff;
+}
+
+.testiBoss {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testiBoss img {
+  z-index: 1;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.testiBoss p {
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 10px;
+  margin-top: -2rem;
+  width: 250px;
+  height: 300px;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 5px 0px rgba(118, 117, 117, 0.5);
+}
+
+.testiBoss p:hover {
+  background-color:rgb(227, 227, 227);
+
+}
+
+.testiBoss span {
+  margin-top: -3rem;
+  position: relative;
+  left: 20%;
+  bottom: 20%;
+  font-weight: bold;
+}
+
+.testiBas {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testiBas img{
+  z-index: 1;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.testiBas p {
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 10px;
+  margin-top: -2rem;
+  width: 250px;
+  height: 300px;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 5px 0px rgba(118, 117, 117, 0.5);
+}
+
+.testiBas p:hover {
+  background-color:rgb(227, 227, 227);
+
+}
+
+.testiBas span {
+  margin-top: -3rem;
+  position: relative;
+  left: 20%;
+  bottom: 20%;
+  font-weight: bold;
+}
+
+.testiBoy {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testiBoy img{
+  z-index: 1;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+
+}
+
+.testiBoy p {
+  font-weight: 300;
+  font-style: italic;
+  padding: 0 10px;
+  margin-top: -2rem;
+  width: 250px;
+  height: 300px;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 5px 0px rgba(118, 117, 117, 0.5);
+}
+
+.testiBoy p:hover {
+  background-color:rgb(227, 227, 227);
+
+}
+
+.testiBoy span {
+  margin-top: -3rem;
+  position: relative;
+  left: 20%;
+  bottom: 20%;
+  font-weight: bold;
+}
+
+footer {
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a7dff1;
 }
