@@ -20,7 +20,6 @@ const PreLogin = () => {
           <Link Link to="/">Home</Link>
           <a href="#feature">Features</a>
           <a href="#contact">Contact</a>
-          <a href="#FAQ">FAQ</a>
           <Link className="signInn" Link to="/Login"><p>Log In</p></Link>
           
         </div>
