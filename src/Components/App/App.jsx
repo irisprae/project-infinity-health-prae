@@ -7,16 +7,14 @@ import Main from "../../Pages/LogOut.jsx/LogOut";
 import Addactivities from "../../Pages/AddActivities/Addactivities";
 
 function App() {
-  const user = localStorage.getItem("token");
+	const user = localStorage.getItem("token");
 
-  return (
-    <Routes>
-      {user && <Route path="/overview" exact element={<Overview />} />}
-      {user && (
-        <Route path="/addactivities" exact element={<Addactivities />} />
-      )}
-      <Route path="/signup" exact element={<Signup />} />
-      <Route path="/login" exact element={<Login />} />
+	return (
+		<Routes>
+			{user && <Route path="/overview" exact element={<Overview />} />}
+			{user && <Route path="/addactivities" exact element={<Addactivities />} />}
+			<Route path="/signup" exact element={<Signup />} />
+			<Route path="/login" exact element={<Login />} />
       <Route path="/logout" exact element={<Main />} />
       <Route path="/" exact element={<Home />} />
       <Route path="/overview" element={<Navigate replace to="/login" />} />
