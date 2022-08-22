@@ -73,7 +73,7 @@ const Signup = () => {
               <br></br>
               <input
                 type="text"
-                placeholder="Birthdate : mm/dd/yyyy"
+                placeholder="Date of Birth: mm/dd/yyyy"
                 name="birthdate"
                 onChange={handleChange}
                 value={data.birthdate}
@@ -93,7 +93,7 @@ const Signup = () => {
               <br></br>
               <input
                 type="height"
-                placeholder="Height : cms."
+                placeholder="Height: cms."
                 name="height"
                 onChange={handleChange}
                 value={data.height}
@@ -103,7 +103,7 @@ const Signup = () => {
               <br></br>
               <input
                 type="weight"
-                placeholder="Weight : kgs."
+                placeholder="Weight: kgs."
                 name="weight"
                 onChange={handleChange}
                 value={data.weight}
