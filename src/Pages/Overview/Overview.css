@@ -68,7 +68,6 @@
   width: 150px;
   height: 60px;
   align-items: flex-start;
-
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -113,6 +112,22 @@
   background: #89D7EE;
 }
 
+.RunningPic {
+  background: #3393EC;
+}
+
+.RunGold {
+  background: #404040;
+}
+
+.RunSilver {
+  background: #404040;
+}
+
+.RunBrass {
+  background: #404040;
+}
+
 .TrophySection{
   display: flex;
   flex-direction: row;
@@ -132,7 +147,57 @@
   mix-blend-mode: normal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  
+}
+
+.ChallengeIn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid black;
+  justify-content: center;
+  height: 259px;
+  background: #A7DFF1;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.ChallengeWeekly {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  width: 250px;
+  height: 60px;
+  align-items: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.ChallengeLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
+}
+
+.ChallengeRight {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
 }
 
 .TrophyBoard{
@@ -150,6 +215,24 @@
   
 }
 
+.TrophyHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.TrophyCard{
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  width: 96%;
+  height:90%;
+  align-items: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  
+}
 
 .Right{
   display: flex;
