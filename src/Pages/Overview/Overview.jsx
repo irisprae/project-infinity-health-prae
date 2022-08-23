@@ -9,6 +9,7 @@ import RunningPic from './run-platinum.png'
 import RunningGold from './run-gold2.png'
 import RunningSilver from './run-silver2.png'
 import RunningBrass from './run-brass2.png'
+import OverviewCard from '../../Components/OverviewCard/OverviewCard'
 import './Overview.css'
 
 
@@ -16,19 +17,73 @@ const Overview = () => {
   let Calories = 285;
   let WalkRun = 1025;
   let ActivitiesPerDay = 1.30;
-  let Water = 1.5; 
+  let Water = 1.5;
+  
+  //assume today is 31/07/2022
+
+  //SQL get lastest 3 card 
+  const lastestcard = [{
+    id:'0',
+    actname:'name0',
+    activity:'running',
+    distance:5,
+    durationHours:'2',
+    durationMin:'30',
+    date:'29/07/2022',
+    calories:'1000',
+    heartrate:80,
+    description:'วิ่งเพื่อลืมคริสทีน',
+    },{
+    id:'1',
+    actname:'name1',
+    activity:'walking',
+    distance:5,
+    durationHours:'5',
+    durationMin:'45',
+    date:'30/07/2022',
+    calories:'2000',
+    heartrate:70,
+    description:'walk for who?',
+    }]
+
+
+  //SQL get today card
+
+  const todaycard = [{
+    id:'2',
+    actname:'name2',
+    activity:'running',
+    distance:5,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'run for who? again',
+    },{
+    id:'3',
+    actname:'name3',
+    activity:'running',
+    distance:500000,
+    durationHours:'3',
+    durationMin:'20',
+    date:'31/07/2022',
+    calories:'1500',
+    heartrate:85,
+    description:'runnnnnnnnnnnnnnnnnnn? again',
+    }]
 
   return (
     <div className='OverviewArea'>
       <div className='NavbarSection'><Navbar /></div>
       <div className='MiddleSection'>
         <div className='LastestSection'>
-          <div>Latest Activities</div>
-          <div>{/*Latest Activities Card Here*/}</div>
+          <div className='OverviewBold'>Latest Activities</div>
+          <div><OverviewCard card = {lastestcard}/></div>
         </div>
         <div className='TodaySection'>
-          <div>Today Activities</div>
-          <div>{/*Today Activities Card Here*/}</div>
+          <div className='OverviewBold'>Today Activities</div>
+          <div><OverviewCard card = {todaycard}/></div>
         </div>
         <div className='StatusSection'>
 
