@@ -1,5 +1,9 @@
+* {
+  margin: 0 auto;
+}
+
 .OverviewBold{
-  font-family: 'Inter';
+
   font-style: bold;
   font-weight: 700;
   font-size: 16px;
@@ -10,44 +14,66 @@
 .OverviewArea{
   display: flex;
   flex-direction: row;
-
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  width: 100wh;
-  
+  width: 100vh;
   /*For Styling*/
-  justify-content: flex-start;
+  filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
+
 }
 
-.NavbarSection{
+.cardList {
+  margin: 0px;
+}
+
+.TodaysCards {
+  margin-left: 0px;
+}
+
+.NavbarSection {
   display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+
   /*For Styling*/
-  /* border: 2px solid black; */
-  width: 220px;
+  width: 25%;
 }
 
-.MiddleSection{
+.MiddleSection {
+  background-color: #EFEFEF;
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 30px 16px 16px 16px;
-  /* border: 2px solid black; */
+  padding: 0 20px;
   width: 100%;
 }
 
 .LastestSection{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 215px;
-  margin: 0;
-  /* border: 2px solid black; */
+  height: 225px;
   width: 100%;
 }
+
+.LatestCards {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+ 
+}
+
+.MiddleSection .LastestSection p {
+  display: flex;
+  margin-top: 20px;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 
 .TodaySection{
   display: flex;
@@ -55,9 +81,18 @@
   justify-content: flex-start;
   height: 215px;
   margin: 0;
-  /* border: 2px solid black; */
   width: 100%;
-  
+}
+
+.MiddleSection .TodaySection p {
+  margin-top: 20px;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
 }
 
 .StatusSection{
@@ -66,8 +101,7 @@
   justify-content: space-between;
   align-items: center;
   height: 110px;
-  /* border: 2px solid black; */
-  
+  width: 100%;
 }
 
 .StatusCard{
@@ -80,7 +114,6 @@
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  
 }
 
 .StatusCard .Grey{
@@ -103,6 +136,18 @@
   height: 40px;
   align-items: center;
   justify-content: center;
+}
+
+.StatusImg-RunningPic {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.StatusImg-RunningPic img {
+  background-color: #3d81fe;
+  width: 50px;
+  border-radius: 10px;
 }
 
 .CalImg{
@@ -140,12 +185,31 @@
 .TrophySection{
   display: flex;
   flex-direction: row;
+  width: 100%;
   height: 276px;
   justify-content: space-between;
-  /* border: 2px solid black; */
 }
 
-.ChallengeBoard{
+.ChallengeBoard {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 259px;
+  background: #A7DFF1;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.ChallengeLeft h4 {
+  margin: 10px 0;
+}
+
+.ChallengeRight h4 {
+  margin: 10px 0;
+}
+
+.ChallengeIn {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -209,43 +273,99 @@
   border-radius: 20px; */
 }
 
-.TrophyBoard{
+.ChallengeWeekly {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  width: 250px;
+  height: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.ChallengeLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  margin: 0;
+  margin: 0 10px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
+}
+
+.ChallengeRight {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  margin-right: 10px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
+}
+
+.TrophyBoard {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
   width: 33%;
-  /* border: 2px solid black; */
   align-items: center;
   justify-content: flex-start;
   height: 260px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  
+  margin-bottom: 0px;
 }
 
 .TrophyHead {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 10px 0;
 }
 
 .TrophyCard{
   display: flex;
   flex-direction: row;
   padding: 6px;
-  width: 96%;
-  height:90%;
+  width: 90%;
   align-items: flex-start;
+  border-top: #eaeaea solid 1px;
+  border-bottom: #eaeaea solid 1px;
+  justify-content: center;
   background: #FFFFFF;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  
+  font-size: 9px;
 }
 
-.Right{
+.TrophyBoard img {
+  background-color: rgb(68, 68, 68);
+  border-radius: 50%;
+  border: #89D7EE solid 5px;
+}
+
+.TrophyCard h4 {
+  font-size: 13px;
+}
+
+
+.Right {
   display: flex;
   flex-direction: column;
   margin: 0;
-  /* border: 2px solid black; */
+}
+
+.RightSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
