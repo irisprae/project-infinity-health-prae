@@ -73,7 +73,7 @@ const Signup = () => {
               <br></br>
               <input
                 type="text"
-                placeholder="Date of Birth: mm/dd/yyyy"
+                placeholder="Date of Birth: yyyy-mm-dd"
                 name="birthdate"
                 onChange={handleChange}
                 value={data.birthdate}
@@ -127,7 +127,7 @@ const Signup = () => {
               <input
                 type="password"
                 placeholder="Password"
-                name="passworde"
+                name="password"
                 onChange={handleChange}
                 value={data.password}
                 required
