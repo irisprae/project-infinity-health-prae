@@ -6,7 +6,7 @@
     height: 836px;
     border-radius: 20px 0 0 20px;
     background-color: #97D4E6;
-    filter: drop-shadow(10px 0px 0px4px rgba(0, 0, 0, 0.5));
+    /* filter: drop-shadow(10px 0px 0px4px rgba(0, 0, 0, 0.5)); */
 }
 
 .Nav__item__top {

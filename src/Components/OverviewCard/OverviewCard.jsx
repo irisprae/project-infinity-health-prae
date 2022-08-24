@@ -12,7 +12,7 @@ let typeSRC ='B';
 const OverviewCard = (props) => 
  {console.log(props)
    
-   
+  
     return (
       <div className='cardList'>
          <div className = 'OverviewCardContainer'>
@@ -52,7 +52,7 @@ const OverviewCard = (props) =>
   
                       <div className="OC2">
                        <div>
-                         <p className="DurationC"><span>Duration:</span> <span>{durationHours} hr. {durationMin} min.</span></p>
+                         <p className="DurationC"><span>Duration:</span> <span>{durationHours} Hr. {durationMin} min.</span></p>
                          <p className="DateC">Date: {date}.</p>
                          {/*<p className="cardActCompletedDateC">Time: {date}.</p>*/}
                          <p className="CaloriesC">{calories} calories</p>
