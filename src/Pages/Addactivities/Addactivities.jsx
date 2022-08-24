@@ -145,6 +145,11 @@ const Addactivities = () => {
     setIsEdit(false)
     setEditId("")
   }
+let editingActivity
+  if (editId) {
+    editingActivity = allTasks.find((task) => task._id === editId);
+
+  }
 
   return (
     <div className="Addactivities">
@@ -160,7 +165,7 @@ const Addactivities = () => {
             addAct={addAct}
           />
         )}
-        {isShow ? <ExerciseForm isEdit={isEdit} editId={editId} closeEdit={closeEdit} /> : <RightSection />}
+        {isShow ? <ExerciseForm isEdit={isEdit} editId={editId} editingActivity={editingActivity} closeEdit={closeEdit} /> : <RightSection />}
       </div>
     </div>
   );

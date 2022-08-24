@@ -23,14 +23,6 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
     );
     setItemOffset(newOffset);
   };
-
-  if (currentItems.length === 0) {
-    return (
-      <div className="exerciseList">
-        <h1>Return Div</h1>
-      </div>
-    );
-  } else {
     return (
       <div className="exerciseList">
         <div className="exerciseListContainer">
@@ -38,7 +30,6 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
             + Create your activities
             <br />
           </h2>
-
           <div className="addCardAct">
             <button className="addCardActText" onClick={addAct}>
               + Tap here to add your activity
@@ -66,7 +57,7 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
                     </div>
                     <div className="cardActType">
                       <span className="boldFont">
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {activity}
+                      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{activity}
                       </span>
                     </div>
                   </div>
@@ -84,7 +75,7 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
                       <strong>Distance: </strong>{distance}
                     </p>
                     <p>
-                      <stong>Heart Rate: </stong>{heartrate}
+                      <strong>Heart Rate: </strong>{heartrate}
                     </p>
                     <p className="cardActAdddate">added activity on {date}</p>
                     <p className="cardActDes">{description}</p>
@@ -123,7 +114,6 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
         />
       </div>
     );
-  }
 };
 
 export default ExerciseList;

@@ -18,7 +18,7 @@ export const getActivity =  async () => {
 }
 
 export const editActivity = async (_id ,{ title, activity, distance, date, duration, calories, heartrate, description }) => {
-    return api.patch('/activities/',{_id},  {
+    return api.patch('/activities/'+_id,  {
         title, 
         activity, 
         distance, 
