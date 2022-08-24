@@ -16,3 +16,23 @@ export const createActivity = async ({ title, activity, distance, date, duration
 export const getActivity =  async () => {
     return api.get('/activities')
 }
+
+export const editActivity = async (_id ,{ title, activity, distance, date, duration, calories, heartrate, description }) => {
+    return api.patch('/activities/'+_id,  {
+        title, 
+        activity, 
+        distance, 
+        date, 
+        duration, 
+        calories, 
+        heartrate, 
+        description
+    })
+}
+
+export const deleteActivity =  async (id) => {
+    return api.delete(`/activities/${id}`)
+}
+
+
+

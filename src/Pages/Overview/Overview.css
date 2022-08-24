@@ -3,7 +3,6 @@
 }
 
 .OverviewBold{
-
   font-style: bold;
   font-weight: 700;
   font-size: 16px;
@@ -46,14 +45,16 @@
   margin: 0;
   padding: 0 20px;
   width: 765px;
+
   height: 836px;
+
 }
 
 .LastestSection{
   display: flex;
   flex-direction: column;
   height: 225px;
-  width: 100%;
+  width: 725px;
 }
 
 .LatestCards {
@@ -61,7 +62,7 @@
   width: 100%;
   display: flex;
   align-content: flex-start;
- 
+
 }
 
 .MiddleSection .LastestSection p {
@@ -74,7 +75,6 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
 
 .TodaySection{
   display: flex;
@@ -93,7 +93,6 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-
 }
 
 .StatusSection{

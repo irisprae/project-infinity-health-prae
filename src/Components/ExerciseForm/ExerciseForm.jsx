@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { createActivity } from "../../api/activity";
+import { createActivity, editActivity } from "../../api/activity";
 import { useForm } from "react-hook-form";
 import "./ExerciseForm.css";
 import { useEffect } from "react";
 
-const ExerciseForm = ({ isEdit = false, editId, closeEdit }) => {
+const ExerciseForm = ({ isEdit = false, editId, editingActivity, closeEdit }) => {
 
   
   const {
@@ -14,7 +14,7 @@ const ExerciseForm = ({ isEdit = false, editId, closeEdit }) => {
   } = useForm();
   const onSubmit = async (data) => {
     if(isEdit){
-      //save Edit
+      await editActivity(editId, data)
       closeEdit()
     }else{
       await createActivity(data);
@@ -23,10 +23,12 @@ const ExerciseForm = ({ isEdit = false, editId, closeEdit }) => {
   const [activity, setActivity] = useState("Run");
   
   useEffect(() => {
-    if(isEdit){
+    if(isEdit) {
       //Fetch data by _id(editId) from backend and set it here;
+      console.log(editingActivity)
     }
-  },[])
+
+  },[editId])
 
   return (
     <div className="exerciseForm">
@@ -53,10 +55,10 @@ const ExerciseForm = ({ isEdit = false, editId, closeEdit }) => {
         <input
           type="number"
           {...register("distance", {
-            required: activity !== "Run" ? false : true,
+            required: activity !== "Running" ? false : true,
             valueAsNumber: true,
           })}
-          disabled={activity !== "Run" ? true : false}
+          disabled={activity !== "Running" ? true : false}
         />
         {errors.distance && <p>Distance is required</p>}
         <label>Date </label>
