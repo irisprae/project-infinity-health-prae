@@ -69,7 +69,7 @@ const Overview = () => {
     date:'31/07/2022',
     calories:'1500',
     heartrate:85,
-    description:'runnnnnnnnnnnnnnnnnnn? again',
+    description:'runnnnnnnnn? again',
     }]
 
   return (
@@ -134,6 +134,7 @@ const Overview = () => {
         <div className="TrophySection">
           <div className=""></div>
           <div className="ChallengeBoard">
+
             <div className="ChallengeLeft">
               <h4>Challenge</h4>
               <div className="ChallengeWeekly">
@@ -142,7 +143,7 @@ const Overview = () => {
                   <img src={RunningPic} />
                 </div>
                 <div>
-                  <h4>Run Platinun</h4>
+                  <h4>Run Platinum</h4>
                   <div>1,000/10,0000 km.</div>
                 </div>
               </div>
@@ -156,7 +157,7 @@ const Overview = () => {
                   <img src={RunningPic} />{" "}
                 </div>
                 <div>
-                  <h4>Run beginner</h4>
+                  <h4>Run Beginner</h4>
                   <div>0/1,0000 km.</div>
                 </div>
               </div>
