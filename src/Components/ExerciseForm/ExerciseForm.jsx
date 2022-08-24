@@ -1,92 +1,52 @@
 import React, { useState } from "react";
+import { createActivity } from "../../api/activity";
 import { useForm } from "react-hook-form";
 import "./ExerciseForm.css";
+import { useEffect } from "react";
 
-const ExerciseForm = () => {
-  // const [activity, setActivity] = useState('Run')
-  // const [distance, setDistance] = useState(0)
-  // const [durationHours, setDurationHours] = useState(0);
-  // const [durationMin, setDurationMin] = useState(0);
-  // const [date, setDate] = useState();
-  // const [calories, setCalories] = useState(0);
-  // const [heartrate, setHearthrate] = useState(0);
-  // const [description, setDescription] = useState('');
+const ExerciseForm = ({ isEdit = false, editId, closeEdit }) => {
 
-  // const submitRecords = () => {
-  //     const records = {
-  //         activity,
-  //         distance,
-  //         durationHours,
-  //         durationMin,
-  //         date,
-  //         calories,
-  //         heartrate,
-  //         description,
-  //     }
-  //     console.log(records);
-  // }
-
-  // return (
-  //     <div className='exerciseForm'>
-  //         <div className='form-box'>
-  //             <form >
-  //                 <h2>Create your activity</h2>
-  //                 <label >Select your activity</label>
-  //                 <select value={activity} onChange={e => setActivity(e.target.value)}>
-  //                     <option>Run</option>
-  //                     <option>Swim</option>
-  //                     <option>Dance</option>
-  //                 </select>
-  //                 <br />
-  //                 <label >Distance: </label>
-  //                 <input type="number" placeholder="put your steps" onChange={e => setDistance(parseFloat(e.target.value))} disabled={activity == 'Run' ? false : true} />
-  //                 <br />
-  //                 <label >Dutation: </label>
-  //                 <br />
-  //                 <input id="hours" type="number" placeholder="Hours" onChange={e => setDurationHours(parseFloat(e.target.value))} />
-  //                 <input id="min" type="number" placeholder="Minute" maxLength={59} onChange={e => setDurationMin(parseFloat(e.target.value))} />
-  //                 <br />
-  //                 <label >Date: </label>
-  //                 <br />
-  //                 <input type="datetime-local" onChange={e => setDate(e.target.value)} required />
-  //                 <br />
-  //                 <label >Calories: </label>
-  //                 <input type="number" placeholder="put your calories" onChange={e => setCalories(parseFloat(e.target.value))} />
-  //                 <br />
-  //                 <label >Heart Rate: </label>
-  //                 <input type="number" placeholder="put your heartrate" onChange={e => setHearthrate(parseFloat(e.target.value))} />
-  //                 <br />
-  //                 <label >Description: </label>
-  //                 <br />
-  //                 <input id="text-box" type="text" placeholder="put your description" onChange={e => setDescription(e.target.value)} />
-  //                 <br />
-  //             </form>
-  //         </div>
-
-  //         <div>
-  //             <button onClick={submitRecords}>Submit</button>
-  //         </div>
-
-  //     </div>
-  // )
-
+  
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    if(isEdit){
+      //save Edit
+      closeEdit()
+    }else{
+      await createActivity(data);
+    }
+  };
   const [activity, setActivity] = useState("Run");
+  
+  useEffect(() => {
+    if(isEdit){
+      //Fetch data by _id(editId) from backend and set it here;
+    }
+  },[])
 
   return (
     <div className="exerciseForm">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Create your activities</h2>
+        <h2>{isEdit ? "Edit" : "Create"} your activities</h2>
+        <label>Title</label>
+        <input type="text" {...register("title", { required: true })} />
         <label>Select your activities</label>
-        <select {...register("activity")} onChange={e => setActivity(e.target.value)}>
-          <option value="Run">Run</option>
-          <option value="Swim">Swim</option>
-          <option value="Dance">Dance</option>
+        <select
+          {...register("activity")}
+          onChange={(e) => setActivity(e.target.value)}
+        >
+          <option value="Boxing">Boxing</option>
+          <option value="Cycling">Cycling</option>
+          <option value="Dancing">Dancing</option>
+          <option value="Hiking">Hiking</option>
+          <option value="Running">Running</option>
+          <option value="Swimming">Swimming</option>
+          <option value="Walking">Walking</option>
+          <option value="Yoga">Yoga</option>
         </select>
         <br />
         <label>Distance</label>
@@ -106,7 +66,7 @@ const ExerciseForm = () => {
         />
         {errors.duration && <p>Date is required</p>}
         <label>Duration </label>
-        <input type="time" {...register("duration", { required: true })} />
+        <input type="number" {...register("duration", { required: true })} />
         {errors.duration && <p>Duration is required</p>}
         <label>Calories</label>
         <input

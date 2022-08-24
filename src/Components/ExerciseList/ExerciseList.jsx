@@ -1,22 +1,22 @@
-import React, { useState,useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import "./ExerciseList.css"
 import ReactPaginate from "react-paginate";
 
 const ExerciseList = ({exerciseList, handleDelete, addAct, handleEdit}) => {
 
     //const {exerciseList} = props;
-    const [currentItems, setCurrentItems] = useState([]);
+    const [currentItems, setCurrentItems] = useState(exerciseList);
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const itemsPerPage  = 3;
   
-  useEffect(() => {
+  // useEffect(() => {
 
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(exerciseList.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(exerciseList.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage,exerciseList]);
+  //   const endOffset = itemOffset + itemsPerPage;
+  //   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  //   // setCurrentItems(exerciseList.slice(itemOffset, endOffset));
+  //   // setPageCount(Math.ceil(exerciseList.length / itemsPerPage));
+  // }, [itemOffset, itemsPerPage,exerciseList]);
 
   const handlePageClick = (e) => {
     const newOffset = (e.selected * itemsPerPage) % exerciseList.length;
@@ -44,7 +44,7 @@ return (
 
         {currentItems.map(
           ({
-            id,
+            _id,
             activity,
             distance,
             durationHours,
@@ -56,7 +56,7 @@ return (
           }) => {
             return (
               
-              <div className="cardAct" key={id}>
+              <div className="cardAct" key={_id}>
                 <div className="cardActName">
                   <div>
                     <span className="boldFont">
@@ -82,18 +82,18 @@ return (
                   <p className="cardActAdddate">added activity on {date}.</p>
                   <p className="cardActCompletedDate">completed on {date}.</p>
                   <p>
-                    id {id} distance {distance} heart {heartrate}
+                    id {_id} distance {distance} heart {heartrate}
                   </p>
                 </div>
                 <button
                   className="deleteActButton"
-                  onClick={() => handleDelete(id)}
+                  onClick={() => handleDelete(_id)}
                 >
                   -Delete-
                 </button>
                 <button
                   className="editActButton"
-                  onClick={() => handleEdit(id)}
+                  onClick={() => handleEdit(_id)}
                 >
                   -Edit-
                 </button>

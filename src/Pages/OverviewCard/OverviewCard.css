@@ -1,0 +1,106 @@
+.boldFont {
+    font-weight: bold;
+}
+
+.NameC span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.OverviewCardContainer{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+}
+
+.OverviewC {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 180px;
+    margin-right: 45px;
+    background: #A7DFF1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.OverviewC p{
+    /* Duration : 1 hr 30min */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    color: #454545;
+}
+
+.OC1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  margin-top: 25px;
+}
+
+.OC1Right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  
+}
+
+.OC2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 160px;
+    margin: 10px;
+  }
+
+.TypePic { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border: 4px solid white;
+    border-radius: 10px;
+    background-color: rgb(30, 196, 149);
+}
+
+.TypePic img{
+    display: block;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+.DetailC{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #454545;
+    
+}
+
+.DetailC span{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80px;
+    object-fit: cover;
+    margin: 0;
+}

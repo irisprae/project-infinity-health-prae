@@ -2,16 +2,15 @@ import React from "react";
 import styles from "./styles.module.css";
 
 
-const Main = () => {
+const Logout = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location='/home';
+		window.location='/login';
 	};
 
 	return (
 		<div className={styles.main_container}>
 			<nav className={styles.navbar}>
-				<h1>fakebook</h1>
 				<button className={styles.white_btn} onClick={handleLogout}>
 					Logout
 				</button>
@@ -20,4 +19,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default Logout;
