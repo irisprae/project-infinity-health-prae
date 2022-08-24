@@ -37,6 +37,11 @@
     justify-content: center;
 }
 
+.cardActDes {
+    font-style: italic;
+    font-weight: 300;
+}
+
 
 .addCardActText {
     display: flex;
@@ -45,8 +50,10 @@
 }
 
 .cardActName {
+    width: 100%;
     margin: 0px;
     display: flex;
+    flex-direction: row;
 }
 
 .boldFont {

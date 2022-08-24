@@ -20,7 +20,7 @@ const ExerciseForm = ({ isEdit = false, editId, editingActivity, closeEdit }) =>
       await createActivity(data);
     }
   };
-  const [activity, setActivity] = useState("Run");
+  const [activity, setActivity] = useState("Running");
   
   useEffect(() => {
     if(isEdit) {
