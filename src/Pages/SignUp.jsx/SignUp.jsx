@@ -26,7 +26,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://infinity-health.vercel.app/api/users";
+      const url = "https://backend-infinity.vercel.app/api/users";
       const { data: res } = await axios.post(url, data);
       navigate("/login");
       console.log(res.message);
