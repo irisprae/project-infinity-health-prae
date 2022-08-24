@@ -3,6 +3,7 @@
 }
 
 .OverviewBold{
+
   font-style: bold;
   font-weight: 700;
   font-size: 16px;
@@ -36,7 +37,6 @@
 
   /*For Styling*/
   width: 25%;
-
 }
 
 .MiddleSection {
@@ -51,7 +51,6 @@
 .LastestSection{
   display: flex;
   flex-direction: column;
-
   height: 225px;
   width: 100%;
 }
@@ -73,7 +72,6 @@
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-
 }
 
 
@@ -81,10 +79,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 225px;
+  height: 215px;
   margin: 0;
   width: 100%;
-  
 }
 
 .MiddleSection .TodaySection p {
@@ -169,6 +166,22 @@
   background: #89D7EE;
 }
 
+.RunningPic {
+  background: #3393EC;
+}
+
+.RunGold {
+  background: #404040;
+}
+
+.RunSilver {
+  background: #404040;
+}
+
+.RunBrass {
+  background: #404040;
+}
+
 .TrophySection{
   display: flex;
   flex-direction: row;
@@ -200,13 +213,64 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   justify-content: center;
   height: 259px;
   background: #A7DFF1;
   mix-blend-mode: normal;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+}
+
+.ChallengeIn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* border: 2px solid black; */
+  justify-content: center;
+  height: 259px;
+  background: #A7DFF1;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.ChallengeWeekly {
+  display: flex;
+  flex-direction: row;
+  padding: 6px;
+  width: 250px;
+  height: 60px;
+  align-items: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.ChallengeLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
+}
+
+.ChallengeRight {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: 1px solid black; */
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px;
+  /* background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px; */
 }
 
 .ChallengeWeekly {

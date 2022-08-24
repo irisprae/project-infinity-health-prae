@@ -116,6 +116,7 @@ const Overview = () => {
             <div>
               <div>{ActivitiesPerDay} Hrs</div>
               <div className="Grey">activities/day</div>
+
             </div>
           </div>
 
@@ -198,6 +199,7 @@ const Overview = () => {
             </div>
           </div>
         </div>
+
       </div>
       <div className="Right">
         <RightSection />
