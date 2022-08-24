@@ -47,12 +47,12 @@ const Navbar = () => {
                   <h4>Challenges</h4>
                 </Link>
               </dd> */}
-              <dd className="Nav__item">
+              {/* <dd className="Nav__item">
                 <img src={SettingPic} className="Nav__logo" />
                 <Link className="Nav__link" to="/Setting">
                   <h4>Settings</h4>
                 </Link>
-              </dd>
+              </dd> */}
             </dl>
           </div>
         </div>

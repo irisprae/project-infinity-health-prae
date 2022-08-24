@@ -102,6 +102,7 @@
   align-items: center;
   height: 110px;
   width: 100%;
+  padding-top: 10px;
 }
 
 .StatusCard{

@@ -2,14 +2,15 @@
     font-weight: bold;
 }
 
-.OverviewCardContainer{
+.OverviewCardContainer {
     display: flex;
     flex-direction: row;
     margin-top: 16px;
+    margin-bottom: 10px;
     /* border: 2px solid red; */
 }
 
-.OverviewC{
+.OverviewC {
     display: flex;
     flex-direction: column;
     width: 210px;
@@ -22,7 +23,7 @@
     justify-content: flex-start;
 }
 
-.OverviewC p{
+.OverviewC p {
     /* Duration : 1 hr 30min */
     font-family: 'Inter';
     font-style: normal;
@@ -32,7 +33,7 @@
     color: #454545;
 }
 
-.OC1{
+.OC1 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -41,7 +42,7 @@
   margin: 0 10px;
 }
 
-.OC1Right{
+.OC1Right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,7 +50,7 @@
   
 }
 
-.OC2{
+.OC2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -57,7 +58,7 @@
     margin: 10px;
   }
 
-.TypePic{
+.TypePic {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -69,7 +70,7 @@
     background-color: rgb(30, 196, 149);
 }
 
-.TypePic img{
+.TypePic img {
     display: block;
     object-fit: cover;
     width: 50px;
@@ -80,7 +81,7 @@
     justify-content: flex-start;
   }
 
-.DetailC{
+.DetailC {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -94,7 +95,7 @@
     
 }
 
-.DetailC span{
+.DetailC span {
     display: flexbox;
     flex-wrap: wrap;
     max-width: 80px;
