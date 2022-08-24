@@ -18,8 +18,8 @@
     background: #A7DFF1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .OverviewC p{
@@ -35,7 +35,7 @@
 .OC1{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 160px;
   margin: 0 10px;
@@ -52,7 +52,7 @@
 .OC2{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     width: 160px;
     margin: 10px;
   }
@@ -76,8 +76,8 @@
     height: 50px;
     margin: 0;
     padding: 0;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
 .DetailC{
