@@ -7,7 +7,7 @@
   flex-direction: column;
   /*For Styling*/
   width: 25%;
-  box-shadow: 10px 0px 0px4px rgba(0, 0, 0, 0.5);
+
 }
 
 .Addactivities {
@@ -16,12 +16,12 @@
   align-items: center;
   width: 100vh;
   height: 100vh;
-  filter: drop-shadow(10px 0px 0px4px rgba(0, 0, 0, 0.5));
+
 }
 
 .BodyAct {
   display: inline-flex;
   height: 836px;
   margin: 0px;
-  box-shadow: 10px 0px 0px4px rgba(0, 0, 0, 0.5);
+
 }
