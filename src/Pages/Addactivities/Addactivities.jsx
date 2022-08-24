@@ -131,6 +131,7 @@ const Addactivities = () => {
 
   const addAct = () => {
     setIsShow((prevIsShow) => !prevIsShow);
+    setIsEdit(false);
   };
 
   const handleEdit =  (_id) => {
