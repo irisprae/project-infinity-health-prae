@@ -11,17 +11,17 @@ function App() {
 
   return (
     <Routes>
-      {/* {user && <Route path="/overview" exact element={<Overview />} />}
-			{user && <Route path="/addactivities" exact element={<Addactivities />} />} */}
+      {user && <Route path="/overview" exact element={<Overview />} />}
+			{user && <Route path="/addactivities" exact element={<Addactivities />} />}
       <Route path="/signup" exact element={<Signup />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="/logout" exact element={<Logout />} />
       <Route path="/" exact element={<Home />} />
-      {/* <Route path="/overview" element={<Navigate replace to="/login" />} />
-      <Route path="/addactivities" element={<Navigate replace to="/login" />} /> */}
+      <Route path="/overview" element={<Navigate replace to="/login" />} />
+      <Route path="/addactivities" element={<Navigate replace to="/login" />} />
       <Route path="/signup" exact element={<Signup />} />
-      <Route path="/overview" exact element={<Overview />} />
-      <Route path="/addactivities" exact element={<Addactivities />} />
+      {/* <Route path="/overview" exact element={<Overview />} />
+      <Route path="/addactivities" exact element={<Addactivities />} /> */}
     </Routes>
   );
 }
