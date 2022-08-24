@@ -26,7 +26,7 @@ const ExerciseList = ({ exerciseList, handleDelete, addAct, handleEdit }) => {
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
     //console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    setCurrentItems(exerciseList.slice(itemOffset, endOffset));
+    setCurrentItems(exerciseList.reverse().slice(itemOffset, endOffset));
     setPageCount(Math.ceil(exerciseList.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, exerciseList]);
 
