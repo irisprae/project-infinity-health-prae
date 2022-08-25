@@ -18,6 +18,7 @@ const ExerciseForm = ({ isEdit = false, editId, editingActivity, closeEdit }) =>
       closeEdit()
     }else{
       await createActivity(data);
+      closeEdit();
     }
   };
   const [activity, setActivity] = useState("Running");
