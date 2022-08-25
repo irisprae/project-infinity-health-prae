@@ -30,6 +30,9 @@ const ExerciseForm = ({ isEdit = false, editId, editingActivity, closeEdit }) =>
     }
 
   },[editId])
+  
+  const disDis = (activity == "Cycling") ? false : (activity == "Hiking") ? false : (activity == "Running") ? false : (activity == "Swimming") ? false : (activity == "Walking") ? false : true ;
+  const disReq = (activity == "Cycling") ? true : (activity == "Hiking") ? true : (activity == "Running") ? true : (activity == "Swimming") ? true : (activity == "Walking") ? true : false ;
 
   return (
     <div className="exerciseForm">
@@ -56,10 +59,11 @@ const ExerciseForm = ({ isEdit = false, editId, editingActivity, closeEdit }) =>
         <input
           type="number"
           {...register("distance", {
-            required: activity !== "Running" ? false : true,
-            valueAsNumber: true,
+              required: disReq,
+              valueAsNumber: true,
+         
           })}
-          disabled={activity !== "Running" ? true : false}
+           disabled={disDis}
         />
         {errors.distance && <p>Distance is required</p>}
         <label>Date </label>
